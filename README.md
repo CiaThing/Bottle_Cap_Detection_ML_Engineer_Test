@@ -66,18 +66,4 @@ docker build -t bsort .
 # Run Inference inside Docker
 # (Using -v to mount current directory so docker can access your images)
 docker run -v $(pwd):/app bsort infer --config settings.yaml --image sample.jpg
-📂 Project Structure
-.
-├── .github/workflows/  # CI/CD Configuration (GitHub Actions)
-├── bsort/              # Source Code for CLI tool
-│   ├── __init__.py
-│   └── main.py         # Main program script
-├── models/             # Trained models & Evaluation plots
-│   ├── best.pt         # Best YOLOv8n weights
-│   └── ...             # Evaluation images
-├── tests/              # Unit tests
-├── notebooks/          # Experimentation & Analysis (Task 1)
-├── dataset_test/       # (Local Only) Test images for inference
-├── Dockerfile          # Docker configuration
-├── settings.yaml       # Hyperparameters configuration
-└── README.md           # Project Documentation
+
