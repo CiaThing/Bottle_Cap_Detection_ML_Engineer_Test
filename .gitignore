@@ -1,0 +1,10 @@
+# .gitignore
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+wandb/
+runs/train/    # Kita skip folder training log yg besar (opsional)
+dataset/       # Jangan upload dataset training (biasanya besar)
+dataset_test/  # Jangan upload dataset kaggle (biar repo ringan)
+# Kita tetap upload 'runs/detect' untuk bukti inferensi, jadi jangan tulis di sini

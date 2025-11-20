@@ -1,0 +1,10 @@
+
+path: "change"                
+train: dataset/train/images  
+val: dataset/val/images      
+
+# Jumlah kelas
+nc: 3
+
+# Nama kelas
+names: ['Light Blue', 'Dark Blue', 'Others']

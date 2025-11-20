@@ -1,0 +1,13 @@
+# --- Model Config ---
+model_path: "models/best.pt"      # Model path location
+image_size: 320                   # Input image size
+confidence_threshold: 0.25        # Lowest treshold
+
+# --- Konfigurasi Output ---
+output_dir: "runs/detect"         # Di mana hasil gambar disimpan
+
+# --- Konfigurasi Training (Opsional jika hanya infer) ---
+dataset_path: "dataset/data.yaml" 
+epochs: 20
+batch_size: 8
+learning_rate: 0.01

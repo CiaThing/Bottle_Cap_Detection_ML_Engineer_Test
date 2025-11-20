@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsort"
+version = "0.1.0"
+description = "Bottle Cap Defect Detection CLI Tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "CiaThing", email = "cia.thing@example.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "ultralytics>=8.0.0",
+    "opencv-python>=4.8.0",
+    "pyyaml>=6.0",
+    "numpy>=1.23.0",
+    "matplotlib>=3.7.0",
+    "types-PyYAML"
+]
+
+[project.scripts]
+bsort = "bsort.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "pylint",
+    "wandb"
+]
+
+# --- Tool configurations ---
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.pylint.messages_control]
+disable = [
+    "C0114", # Missing module docstring
+    "C0115", # Missing class docstring
+    "E0401", # Import error (sometimes pylint confused with local paths)
+]
+
+[tool.pylint.format]
+max-line-length = 100
