@@ -1,7 +1,8 @@
 import argparse
-import yaml
 import os
-from typing import Dict, Any
+from typing import Any, Dict
+
+import yaml
 from ultralytics import YOLO
 
 
