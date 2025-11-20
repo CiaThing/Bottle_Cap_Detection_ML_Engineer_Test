@@ -9,9 +9,9 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # 1. Install System Dependencies
-# OpenCV requires 'libgl1' and 'libglib2.0-0' on slim versions
+# FIX: Gunakan 'libgl1' menggantikan 'libgl1-mesa-glx' yang sudah deprecated
 RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
